@@ -9,31 +9,11 @@ echo "Installing PHP $NEW_PHP_VERSION"
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update -y
 
-
 apt-cache showpkg php -y
 
+sudo apt install php"$NEW_PHP_VERSION" -y
 
-sudo apt install php"$NEW_PHP_VERSION"
-
-sudo apt install php"$NEW_PHP_VERSION"-mysql php"$NEW_PHP_VERSION"-xml php"$NEW_PHP_VERSION"-gd php"$NEW_PHP_VERSION"-mbstring
-
-
-sudo apt install php"$NEW_PHP_VERSION"-fpm \
-    php"$NEW_PHP_VERSION"-mysql \
-    php"$NEW_PHP_VERSION"-mbstring \
-    php"$NEW_PHP_VERSION"-xml \
-    php"$NEW_PHP_VERSION"-bcmath \
-    php"$NEW_PHP_VERSION"-curl \
-    php"$NEW_PHP_VERSION"-cli \
-    php"$NEW_PHP_VERSION"-common \
-    php"$NEW_PHP_VERSION"-mysql \
-    php"$NEW_PHP_VERSION"-zip \
-    php"$NEW_PHP_VERSION"-gd \
-    php"$NEW_PHP_VERSION"-mbstring \
-    php"$NEW_PHP_VERSION"-curl \
-    php"$NEW_PHP_VERSION"-xml \
-    php"$NEW_PHP_VERSION"-bcmath \
-    php"$NEW_PHP_VERSION"-intl
+sudo apt install -y php"$NEW_PHP_VERSION"-fpm php"$NEW_PHP_VERSION"-mysql php"$NEW_PHP_VERSION"-mbstring php"$NEW_PHP_VERSION"-xml php"$NEW_PHP_VERSION"-bcmath php"$NEW_PHP_VERSION"-curl php"$NEW_PHP_VERSION"-cli php"$NEW_PHP_VERSION"-common php"$NEW_PHP_VERSION"-zip php"$NEW_PHP_VERSION"-gd php"$NEW_PHP_VERSION"-intl
 
 sudo a2dismod php"$CURRENT_PHP_VERSION"
 
